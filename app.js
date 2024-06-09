@@ -3,7 +3,6 @@ const app = express();
 
 const database = require('./config/connection');
 const cookieParser = require('cookie-parser');
-const bcrypt = require('bcrypt');
 
 const adminRouter = require('./routes/adminRouter');
 const usersRouter = require('./routes/usersRouter');
