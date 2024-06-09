@@ -23,8 +23,8 @@ app.get('/', (req, res) => {
     res.render('index');
 });
 
-app.get('/create', (req, res) => {
-    res.render('create');
+app.get('/register', (req, res) => {
+    res.render('register');
 });
 
 app.listen(3000);
