@@ -15,6 +15,7 @@ router.post('/register', async (req, res) => {
 
     let user = await userModel.findOne({email});
     if (user) return res.status(400).send("User already registered !");
+    else return res.status(200).send("Registered successfully, Now you can login!")
 
     bcrypt.genSalt(10, function (err, salt) {
         bcrypt.hash(password, salt, async function (err, hash) {
