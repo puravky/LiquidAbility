@@ -14,7 +14,7 @@ router.get('/register', (req, res) => {
     res.render('register');
 });
 
-router.get('/shop', isLogin, (req, res) => {
+router.get('/shop', (req, res) => {
     res.render('shop');
 });
 
