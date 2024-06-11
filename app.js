@@ -10,7 +10,7 @@ const adminRouter = require('./routes/adminRouter');
 const usersRouter = require('./routes/usersRouter');
 const productsRouter = require('./routes/productsRouter');
 const indexRouter = require('./routes/index');
-
+ 
 app.set('view engine', 'ejs');
 app.use(express.json());
 app.use(cookieParser());

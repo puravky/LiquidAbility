@@ -4,9 +4,7 @@ const userModel = require('../models/user');
 const bcrypt = require('bcrypt');
 const jwt = require('jsonwebtoken');
 require('dotenv').config();
-
-
-router.get('/', (req, res) => {
+router.get('/', (_req, res) => {
     res.send("working")
 });
 
@@ -39,7 +37,8 @@ router.post('/login', async (req, res) => {
         if (result) {
             let token = jwt.sign({ email, id: user._id }, process.env.JWT_KEY);
             res.cookie("token", token);
-            res.status(200).send("Logged in successfully!");
+            res.status(200);
+            res.redirect('/shop');
         }
         else return res.status(400).send("Incorrect password!");
     });
